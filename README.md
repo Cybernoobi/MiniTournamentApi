@@ -21,13 +21,13 @@ docker-compose up -d
 Запуск через poetry:
 ```bash
 poetry install
-cd ./app
+alembic upgrade head
 poetry run python main.py
 ```
 
 Запуск через Python:
 ```bash
 pip install -r requirements.txt
-cd ./app
+alembic upgrade head
 python main.py
 ```
