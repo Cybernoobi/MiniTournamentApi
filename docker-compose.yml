@@ -1,0 +1,16 @@
+services:
+  app:
+    container_name: tournament_api
+    build: .
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/code
+#    environment:
+#      - HOST=${HOST:-localhost}
+#      - PORT=${PORT:-8000}
+#      - DEBUG=false
+#      - DB_NAME=database.db
+    env_file:
+      - .env
+    command: "poetry run python main.py"
